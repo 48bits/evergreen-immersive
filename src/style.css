@@ -768,6 +768,28 @@ body[data-view="immersive"] .chapter-copy {
 body[data-view="immersive"] .hero-copy {
   width: 50%;
 }
+body[data-view="immersive"] .chapter-copy::before,
+body[data-view="immersive"] .hero-copy::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -14vh -12vw -12vh -6vw;
+  background: var(--paper);
+  opacity: 0.62;
+  backdrop-filter: blur(26px) saturate(1.05);
+  -webkit-backdrop-filter: blur(26px) saturate(1.05);
+  mask-image: radial-gradient(
+    ellipse 78% 74% at 30% 42%,
+    #000 40%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 78% 74% at 30% 42%,
+    #000 40%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
 body[data-view="immersive"] .hero .stop {
   padding-top: 0;
 }
@@ -1094,6 +1116,20 @@ body[data-view="reading"] #chapter-nav {
     width: 100%;
     max-width: 600px;
     padding-top: 250px;
+  }
+  body[data-view="immersive"] .chapter-copy::before,
+  body[data-view="immersive"] .hero-copy::before {
+    inset: -8vh calc(var(--gutter) * -1);
+    mask-image: radial-gradient(
+      ellipse 92% 82% at 50% 38%,
+      #000 45%,
+      transparent 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      ellipse 92% 82% at 50% 38%,
+      #000 45%,
+      transparent 100%
+    );
   }
   body[data-view="immersive"] .chapter-panel {
     min-height: 0;
