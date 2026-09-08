@@ -1,0 +1,14 @@
+{
+  "before": {
+    "width": 1440,
+    "height": 1000,
+    "dpr": 1.0000000149011612
+  },
+  "after": {
+    "width": 720,
+    "height": 500,
+    "dpr": 2.0000000298023224
+  },
+  "actualZoom": "200%",
+  "overflow": false
+}
